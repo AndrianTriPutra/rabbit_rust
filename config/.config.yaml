@@ -1,0 +1,11 @@
+general:
+  devid    : A0001
+  tz       : true
+  periodic : 60s
+
+rabbit:
+  host     : amqp://guest:guest@localhost:5672/%2f
+  tag      : rust-rabbit"
+  que      : rust_test
+  reconnect: 10s
+  retries  : 5
