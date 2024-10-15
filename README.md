@@ -7,3 +7,6 @@
 
 ## docker
 - rabbit : docker compose -f docker-compose.yml -p rabbitmq up --remove-orphans -d --build
+
+## documentation
+- [medium](https://andriantriputra.medium.com/be-rust-how-to-implement-rabbit-in-rust-239ceed71895)
