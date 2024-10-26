@@ -11,4 +11,4 @@
 ## documentation
 - [medium](https://andriantriputra.medium.com/be-rust-how-to-implement-rabbit-in-rust-239ceed71895)
 
-- [youtube](https://youtu.be/L4hY3qe7Bck)
+- [youtube]()
