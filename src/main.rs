@@ -80,7 +80,7 @@ async fn publisher(conf: &config::config::Config){
                     if failed>conf.rabbit.retries{
                         log::log::logger("fatal", "connection", "failed rabbit more than retries");
                     }
-                    sleep(Duration::from_secs(5)).await;  // Wait before retrying
+                    sleep(conf.rabbit.reconnect).await;  // Wait before retrying
                 }
             }
         }
@@ -104,7 +104,7 @@ async fn publisher(conf: &config::config::Config){
                     
         }
 
-        sleep(conf.rabbit.reconnect).await; 
+        sleep(conf.general.periodic).await; 
     }
 }
 
@@ -129,7 +129,7 @@ async fn consumers(conf: &config::config::Config){
                 if failed>conf.rabbit.retries{
                     log::log::logger("fatal", "connection", "failed rabbit more than retries");
                 }
-                sleep(Duration::from_secs(5)).await;  // Wait before retrying
+                sleep(conf.rabbit.reconnect).await;  // Wait before retrying
             }
         }
     }
